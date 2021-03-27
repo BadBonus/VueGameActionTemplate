@@ -729,27 +729,6 @@ export default {
         },
       } = this;
 
-      // always
-      //   choosedItems.forEach((value, index) => {
-      //   form.append(`product[${index}]`, value.id);
-      // });
-      // choosedItems.forEach((value, index) => {
-      //   form.append(`count[${index}]`, value.count);
-      // });
-      // choosedItems.forEach((value, index) => {
-      //   form.append(`cost[${index}]`, value.cost);
-      // });
-      // form.append("name", name);
-      // form.append("secondName", lastname ? lastname : "");
-      // form.append("email", email);
-      // form.append("check_number", checkNumber);
-      // form.append("file", file);
-      // form.append("phone", phone);
-      // form.append("purchase_date", day + " январь 2021");
-      // form.append("surname", surname);
-      // form.append("address", post);
-      // form.append("operator", provider);
-
       choosedItems.forEach((item, index) => {
         form.append(`product[${index}]`, item.value);
       });
@@ -775,6 +754,8 @@ export default {
       form.append("address", post);
       form.append("check_number", cheque);
 
+      this.reset();
+
       // axios
       //   .post(postRegistration, form)
       //   .then(({ data }) => {
@@ -792,6 +773,38 @@ export default {
       //       this.finishedMessage = "Произошла ошибка, попробуйте позже";
       //     }
       //   });
+
+      //example for post with checking of google
+      // await this.$recaptcha("homepage").then((token) => {
+      //   this.$httpService
+      //     .post("participate/captcha/verify", {
+      //       secret: `${process.env.VUE_APP_SECRET_SITE_KEY}`,
+      //       token: token,
+      //     })
+      //     .then((response) => {
+      //       if (response.data.success.success) {
+      //         axios
+      //           .post(postRegistration, form)
+      //           .then(({ data }) => {
+      //             this.finishedMessage = data.data.message;
+      //             this.reset();
+      //             this.forceBadRerender = false;
+      //             this.isLoadingData = false;
+      //             setTimeout(() => (this.forceBadRerender = true), 0);
+      //           })
+      //           .catch((error) => {
+      //             this.isLoadingData = false;
+      //             if (error.response) {
+      //               this.finishedMessage = error.response.data.message;
+      //             } else {
+      //               this.finishedMessage = "Произошла ошибка, попробуйте позже";
+      //             }
+      //           });
+      //       } else {
+      //         this.$snotify.error("Похоже, что Вы - робот");
+      //       }
+      //     });
+      // });
     },
   },
   mounted() {
