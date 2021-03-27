@@ -1,0 +1,1108 @@
+@import "../../styles/media.less";
+@import "../../styles/variables.less";
+
+@-moz-document url-prefix() {
+  .GameRegistration {
+    @media @desktop {
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .GameRegistration {
+    .btn {
+      @media @desktop {
+        margin-top: 4.5vw !important;
+      }
+    }
+  }
+}
+
+.GameRegistration {
+  padding-bottom: 8.9vw;
+  position: relative;
+  @media @desktop {
+    padding-bottom: 5.5vw;
+  }
+  input {
+    // font-family: "Open Sans";
+  }
+
+  .registrationEnd {
+    padding-top: 13.5vw;
+    @media @desktop {
+      font-size: 4.45vw;
+      padding-top: 5.7vw;
+    }
+  }
+  &__form {
+    margin: auto;
+    margin-top: 10.9vw;
+    font-weight: 500;
+    width: 94%;
+    @media @desktop {
+      margin-top: 5.1vw;
+      width: 81.7%;
+    }
+  }
+  &__formContent {
+    @media @desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+    &_items {
+      margin-top: 3.8vw;
+      @media @desktop {
+        display: block;
+        margin-top: 0.8vw;
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    font-size: inherit;
+    height: inherit;
+    padding-left: 2.3vw;
+    // border-radius: 200px;
+    border: none;
+    box-sizing: border-box;
+    background: @main_color2;
+    color: @main_color1;
+    font-family: inherit;
+    font-weight: 500;
+    &::placeholder {
+      color: @main_color1;
+    }
+    @media @desktop {
+      padding-left: 1.3vw;
+    }
+  }
+
+  &__blockContent {
+    width: 100%;
+    margin-bottom: 4vw;
+
+    @media @desktop {
+      margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 30.8%;
+    }
+
+    &-deskShopCheck {
+      display: none;
+      @media @desktop {
+        display: flex;
+        margin-top: 1.8vw;
+      }
+      .ValidationProvider {
+        width: 41.1vw !important;
+      }
+    }
+
+    & > * {
+      margin-bottom: 2vw;
+      display: block;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:not(.GameRegistration__blockContentTitle) {
+        margin-bottom: 3.9vw !important;
+        @media @desktop {
+          margin-bottom: 2.3vw !important;
+        }
+        &:last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+  }
+  &__blockContentTitle {
+    font-weight: bold;
+    margin-left: 1.7vw;
+    font-size: 3.7vw;
+    display: block;
+    color: @main_color2;
+    position: relative;
+    margin-bottom: 3.1vw;
+    bottom: -0.7vw;
+    font-weight: 500;
+    @media @desktop {
+      font-size: 1.3vw;
+      margin-bottom: 0.8%;
+      margin-left: 0;
+      position: static;
+      bottom: 0;
+
+      &.GameRegistration__blockContentTitle-duoBlock {
+        position: relative;
+        // left: 14.8vw;
+        margin-left: 19.2vw;
+        @media @desktop {
+          margin-left: 1.6%;
+        }
+      }
+    }
+
+    &_dateTitle {
+      @media @desktop {
+        position: absolute;
+        bottom: unset;
+        top: 13.2vw;
+        right: 17vw;
+      }
+    }
+  }
+  &__FIOBlock {
+  }
+  &__techInfo {
+    // display: flex;
+    &__Phone {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      @media @desktop {
+        width: 32.5%;
+      }
+      & > *:first-child {
+        width: 69.6%;
+        @media @desktop {
+          width: 67% !important;
+        }
+      }
+      & > *:last-child {
+        @media @desktop {
+          // margin-left: 1.9% !important;
+          // width: 100% !important;
+        }
+      }
+    }
+    .phone {
+      width: 36.5vw;
+      @media @desktop {
+        width: 38% !important;
+      }
+    }
+    .phoneFirst {
+      width: 16.5vw;
+      @media @desktop {
+        width: 16.3% !important;
+        input {
+          padding-left: 0.4vw;
+        }
+      }
+    }
+    .code {
+      width: 17vw;
+      @media @desktop {
+        width: 18% !important;
+        .CustomSelector__choosedOptionName {
+          position: relative;
+          right: 10%;
+        }
+      }
+    }
+    .operator {
+      width: 21.1vw;
+      @media @desktop {
+        width: 21.8% !important;
+        .CustomSelector__choosedOptionName {
+          position: relative;
+          right: 10%;
+        }
+      }
+    }
+  }
+  &__checkInfo {
+    &__Date {
+      display: flex;
+      justify-content: flex-start;
+      & > * {
+        margin-right: 5%;
+        &:first-child {
+          width: 30%;
+          @media @desktop {
+            width: 7vw !important;
+          }
+        }
+        &:nth-child(2) {
+          width: 65%;
+          margin-left: 5% !important;
+          @media @desktop {
+            width: 14vw !important;
+            margin-left: 1% !important;
+          }
+        }
+      }
+    }
+  }
+
+  &__ItemBlock {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+    position: relative;
+    z-index: 10;
+    flex-direction: column;
+
+    @media @desktop {
+      margin-top: 0;
+      flex-direction: row;
+      padding: 0 7vw;
+    }
+
+    .ValidationProvider {
+      width: 100%;
+      @media @desktop {
+      }
+    }
+  }
+
+  &__ItemBlockSbm {
+    border: 1px solid @main_color1;
+    outline: none;
+    // border-radius: 100px;
+    background: #fff;
+    width: 3.3vw;
+    height: 3vw;
+    color: @main_color1;
+    font-weight: 600;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    padding-bottom: 2px;
+
+    align-self: flex-end;
+    width: 10.5vw;
+    height: 10.5vw;
+    margin-top: 3.8vw;
+    font-size: 10vw;
+    border: none;
+    // font-family: "Open Sans";
+    position: relative;
+
+    @media @desktop {
+      width: 2.9vw;
+      height: 2.9vw;
+      font-size: 2.4vw;
+      margin-top: 0;
+    }
+
+    &::before {
+      content: "*поля, обязательные для заполнения";
+      position: absolute;
+      color: #00a6aa;
+      font-size: 2.9vw;
+      left: -62.4vw;
+      width: 56vw;
+      top: 2.6vw;
+      @media @desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__ItemList {
+    margin-top: 1vw;
+    width: 100%;
+    @media @desktop {
+      margin-top: 0;
+    }
+    & > li {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin-bottom: 7vw;
+      @media @desktop {
+        flex-direction: row;
+        margin-bottom: 1vw;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      & > * {
+        &:first-child {
+          margin-bottom: 6.5vw;
+          @media @desktop {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &:last-child {
+        position: relative;
+        &::after {
+          content: "*поля, обязательные для заполнения";
+          position: absolute;
+          top: 3.5vw;
+          font-size: 0.9vw;
+          text-align: center;
+          margin: auto;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+    &__name {
+      width: 73%;
+      position: relative;
+      z-index: 1000;
+      @media @desktop {
+        margin-right: 1vw !important;
+        width: 35.6vw !important;
+      }
+    }
+    &__count {
+      width: 5%;
+    }
+    &__cost {
+      width: 20%;
+    }
+  }
+  &__RulesBlock {
+    margin-top: 7.3vw;
+    @media @desktop {
+      margin-top: 3.7%;
+      margin-left: 14%;
+    }
+    .formulate-input {
+      position: relative;
+      input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+      &-wrapper {
+        display: flex;
+      }
+
+      .errorContainer {
+        left: 10vw;
+        bottom: -3.5vw !important;
+        @media @desktop {
+          left: 4.3vw;
+          bottom: -0.8vw !important;
+        }
+      }
+    }
+
+    .ValidationProvider {
+      @media @desktop {
+        width: 100% !important;
+        height: 2vw !important;
+
+        &:first-of-type {
+          @media @desktop {
+            margin-bottom: 1.2vw;
+          }
+        }
+        &:last-of-type {
+          position: relative;
+          right: 2.8vw;
+        }
+      }
+    }
+  }
+  .CustomSelector {
+    position: static;
+    height: inherit;
+    // border-radius: 200px;
+    font-size: inherit;
+    border: none;
+    background: @main_color2;
+    padding-left: 1.8vw;
+    box-sizing: border-box;
+    // font-family: "Open Sans";
+
+    @media @desktop {
+      padding-left: 0.2vw;
+    }
+    ul {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 11vw;
+      border: 1px solid gray;
+      // border-radius: 10px;
+      background: @main_color2;
+      color: @main_color1;
+      z-index: 1000;
+      overflow-y: scroll;
+      max-height: 40vh;
+
+      @media @desktop {
+        top: 3vw;
+      }
+      li {
+        border-bottom: 1px solid gray;
+        padding: 2vw;
+
+        @media @desktop {
+          padding: 0.5vw;
+        }
+
+        &:last-child {
+          border-bottom: unset;
+        }
+      }
+    }
+  }
+  .ValidationProvider {
+    position: relative;
+    margin: 0;
+    height: 10.8vw;
+    font-size: 4.8vw;
+
+    @media @desktop {
+      height: 2.8vw;
+      font-size: 1.3vw;
+      // margin-right: 0.4vw;
+      width: 100%;
+
+      &-mlS {
+        margin-left: 0.7vw;
+        margin-right: 0.7vw;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    input[disabled] {
+      opacity: 0.5;
+      background: #fff;
+    }
+
+    &.file {
+      margin-top: 4vw;
+      @media @desktop {
+        margin-top: 0;
+      }
+    }
+
+    &.itemName {
+      margin-bottom: 4.3vw;
+      @media @desktop {
+        margin-bottom: 0;
+        width: 83.8%;
+      }
+    }
+    &.itemCount {
+      width: 58vw;
+      @media @desktop {
+        width: 66% !important;
+      }
+    }
+    .CustomSelector__choosedOptionName{
+      width: 90%;
+    }
+  }
+
+  .GameRegistration__formContent:not(.GameRegistration__formContent_items) {
+    .ValidationProvider {
+      @media @desktop {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .GameRegistration__phoneInfo {
+    .ValidationProvider {
+      @media @desktop {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  .customFileInput {
+    height: inherit;
+    // border-radius: 200px;
+    background: #fff;
+    border: none;
+  }
+  &__sbmBtn {
+    background: #fff;
+    outline: none;
+    border: 1px solid darkblue;
+    padding: 10px;
+    text-transform: uppercase;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    &:not([disabled]) {
+      &:hover {
+        background-color: rgb(92, 204, 241);
+        color: #fff;
+      }
+    }
+    &[disabled] {
+      opacity: 0.5;
+      background-color: lightgray;
+    }
+  }
+
+  &__ItemListCountCost {
+    @media @desktop {
+      width: 25vw;
+    }
+    & > * {
+      display: inline-block;
+    }
+    & > *:first-child {
+      width: 29%;
+      @media @desktop {
+        width: 6.3vw !important;
+      }
+    }
+    & > *:last-child {
+      width: 65%;
+      margin-left: 6%;
+    }
+  }
+
+  .errorContainer {
+    position: absolute;
+    bottom: -2.9vw;
+    left: 4vw;
+    font-size: 2.7vw;
+    border-radius: 20px;
+    color: #ea4747;
+    text-align: center;
+    padding: 0 0.5vw;
+    @media @desktop {
+      bottom: -1vw;
+      left: -0.4vw;
+      font-size: 0.9vw;
+      // min-width: 23vw;
+      z-index: 5;
+    }
+  }
+
+  .btn {
+    text-transform: uppercase;
+    margin-top: 12vw;
+    width: 100% !important;
+    border-radius: unset;
+    padding: 4.1vw 0;
+    font-size: 5vw;
+    text-align: center;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    color: @main_color1;
+    background: @main_color2;
+    font-weight: 600;
+
+    @media @desktop {
+      margin-top: 3.8vw;
+      font-size: 1.3vw !important;
+      padding: 1.2vw 0 !important;
+      width: 25vw !important;
+      border-width: 4px;
+    }
+
+    &:hover {
+      color: @main_color2;
+      background: @main_color1;
+    }
+  }
+
+  a {
+    color: @main_color1;
+    text-decoration: underline;
+  }
+
+  &__modal {
+    position: fixed;
+    z-index: 1000;
+    width: 60%;
+    top: 2vw;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vw;
+    width: 90%;
+    height: 30vw;
+    color: #fff;
+    background: @main_color1;
+    border: 1px solid #fff;
+    padding: 0.5vw;
+    @media @desktop {
+      height: auto;
+      padding: 2.5vw 0.5vw;
+      font-size: 2.5vw;
+    }
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: none;
+      cursor: pointer;
+
+      color: @main_color1;
+      background: #fff;
+
+      width: 13vw;
+      height: 5.2vw;
+      font-size: 4vw;
+      border-radius: 0 0 0 11px;
+      &:hover {
+        // background: #48c13c;
+      }
+      @media @desktop {
+        font-size: 2vw;
+        width: 5vw;
+        height: 3vw;
+        border-radius: 0 0 0 21px;
+      }
+    }
+  }
+
+  &__messageForRequired {
+    color: @main_color2;
+    font-size: 3.15vw;
+    padding-left: 17vw;
+    margin-bottom: 0;
+    position: relative;
+    bottom: 4vw;
+    margin-top: 9.7vw;
+    @media @desktop {
+      position: static;
+      font-size: 0.975vw;
+      margin-top: 1.6vw;
+      padding-left: 33.1vw;
+    }
+  }
+
+  .tovar {
+    position: relative;
+    margin-top: 3.5vw;
+    z-index: 10;
+    @media @desktop {
+      margin-top: 0;
+    }
+    // &::before {
+    //   content: "Акционные товары";
+    //   position: absolute;
+    //   font-family: "21 CENT";
+    //   font-weight: 600;
+    //   top: -8.3vw;
+    //   left: 3.1vw;
+
+    //   @media @desktop {
+    //     top: 0;
+    //     left: 5.9%;
+    //     margin-top: -9.3%;
+    //     font-size: 1.3vw;
+    //   }
+    // }
+    li {
+      @media @desktop {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    & > li:not(:last-of-type) {
+      margin-bottom: 6.5vw;
+      @media @desktop {
+        margin-bottom: 1.5vw;
+      }
+    }
+  }
+
+  &__phoneInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__date {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.4vw;
+    @media @desktop {
+      // margin-bottom: 0;
+    }
+
+    .CustomSelector__options {
+      @media @desktop {
+        li {
+          display: flex;
+          justify-content: center;
+          span {
+            left: 0 !important;
+          }
+        }
+      }
+    }
+
+    .day {
+      width: 20.7vw;
+      @media @desktop {
+        width: 23%;
+      }
+      .CustomSelector__options {
+        max-height: 70vw;
+        overflow-y: scroll;
+      }
+    }
+    .month {
+      width: 49.8vw;
+      @media @desktop {
+        width: 51%;
+      }
+      .CustomSelector__choosedOptionName {
+        position: relative;
+        left: 5vw;
+        @media @desktop {
+          width: 90%;
+          left: -10%;
+          text-align: center;
+        }
+      }
+      .CustomSelector__optionsLabel {
+        position: relative;
+        left: 5vw;
+        @media @desktop {
+        }
+      }
+    }
+    .year {
+      width: 22.1vw;
+      @media @desktop {
+        width: 23%;
+      }
+      input {
+        padding-left: 5vw;
+        @media @desktop {
+          box-sizing: border-box;
+          padding-left: 23%;
+        }
+      }
+    }
+  }
+
+  .createPart {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media @desktop {
+      width: 15.7%;
+    }
+    button {
+      padding: 0;
+      margin: 0;
+      width: 35vw;
+      border: navajowhite;
+      font-size: 7.6vw;
+      font-weight: 900;
+      color: @main_color1;
+      background-color: @main_color2;
+      @media @desktop {
+        width: 3.9vw;
+        height: 2.8vw;
+        font-size: 2vw;
+      }
+    }
+  }
+
+  &__decorCircle {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    width: 92vw;
+    height: 70vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    @media @desktop {
+      width: 46%;
+      height: 57%;
+    }
+
+    &_first {
+      top: -210vw;
+      @media @desktop {
+        top: -22vw;
+        left: -49vw;
+      }
+    }
+
+    &:last-of-type {
+      top: 160vw;
+      @media @desktop {
+        top: 10vw;
+        right: -59vw;
+      }
+    }
+  }
+
+  &__formWrapper {
+    position: relative;
+    z-index: 10;
+  }
+
+  .GameRegistration__confetti {
+    display: none;
+    @media @desktop {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -6.1vw;
+      width: 34.1vw;
+    }
+  }
+}
+
+.customFileInput {
+  width: 100%;
+  height: 100%;
+  border: 1px solid gray;
+  // border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 4vw;
+  box-sizing: border-box;
+  @media @desktop {
+    padding-left: 1.6vw;
+  }
+  input {
+    width: inherit;
+    height: inherit;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &__helper {
+    position: absolute;
+    right: 3.4%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 57%;
+    width: 7.5%;
+    border-radius: 100px;
+    background-color: #fff;
+    color: @main_color1;
+    font-family: "Open Sans";
+    text-align: center;
+    cursor: pointer;
+    font-size: 100%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    // &::before {
+    //   white-space: pre;
+    //   content: "ВНИМАНИЕ! \A Фото чека должно быть четким. \A Чек должен включать следующую информацию о продукции,\A  участвующей в рекламной игре: \A Наименование и количество  \AЦена продукции, участвующей в игре (ВАЖНО: \Aнеобходимо приобрести игровые товары на сумму не менее 10 р) \A Дата продажи \AУНП магазина \AНомер кассового чека \AЕсли в чеке нет данной информации, возьмите копию\A товарного  чека в магазине, где совершали покупку,\A и зарегистрируйтесь ещё раз.\AТелефон для справок: +375 (44) 583 76 93. ";
+    //   display: none;
+    //   position: absolute;
+    //   top: -41.5vw;
+    //   left: -75vw;
+    //   background: rgba(0, 0, 0, 0.75);
+    //   font-size: 50%;
+    //   width: 80vw;
+    //   padding: 3.5vw;
+    //   cursor: default;
+    //   color: #fff;
+    //   @media @desktop {
+    //     content: "ВНИМАНИЕ! \A Фото чека должно быть четким. \A Чек должен включать следующую информацию о продукции, участвующей в рекламной игре: \A Наименование и количество  \AЦена продукции, участвующей в игре (ВАЖНО: необходимо приобрести игровые товары \A на сумму не менее 10 р) \A Дата продажи \AУНП магазина \AНомер кассового чека \AЕсли в чеке нет данной информации, возьмите  копию  товарного  чека в магазине,\A где совершали покупку, и зарегистрируйтесь ещё раз.\AТелефон для справок: +375 (44) 583 76 93. ";
+    //     top: -15vw !important;
+    //     left: -41vw;
+    //     background: rgba(0, 0, 0, 0.75);
+    //     font-size: 1vw;
+    //     width: 50vw;
+    //     padding: 1.5vw;
+    //     color: #fff;
+    //   }
+    // }
+    &:hover {
+      .customFileInput__helperModal {
+        display: block;
+      }
+    }
+    img {
+      width: 100%;
+      @media @desktop {
+        width: 2.4vw;
+        margin-right: 0.9vw;
+      }
+    }
+    .customFileInput__helperModal {
+      display: none;
+      position: absolute;
+      color: #fff;
+      background: @main_color1;
+      // box-shadow: 0px 0px 10px #0f390a;
+      font-size: 3vw;
+      width: 80vw;
+      padding: 3vw;
+      border-radius: 50px;
+      border: 3px solid @main_color2;
+      left: -75vw;
+      top: -55vw;
+      // font-family: "Roboto";
+      margin: auto;
+
+      @media @desktop {
+        font-size: 1vw;
+        padding: 1vw;
+        top: -18.9vw;
+        width: 35vw;
+        right: -37.6vw;
+      }
+
+      ol {
+        margin-bottom: 1.5vw;
+        margin-top: 1vw;
+        text-align: left;
+        list-style: decimal;
+        padding-left: 4.2vw;
+
+        @media @desktop {
+          margin-bottom: 0;
+        }
+      }
+
+      ol + br + p {
+        font-size: 2.4vw;
+        @media @desktop {
+          font-size: 1vw;
+        }
+      }
+
+      &_p {
+        @media @desktop {
+          font-size: 1.17vw;
+        }
+      }
+    }
+  }
+
+  &__acceptImg {
+    position: absolute;
+    left: 2%;
+    width: 2vw;
+  }
+
+  &__fileName {
+    // position: absolute;
+    // top: 0;
+    // margin: auto;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // border: none;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+  }
+}
+
+.CustomCheckbox {
+  color: @main_color1;
+  position: relative;
+  height: auto;
+  margin-bottom: 1.5vw;
+  display: flex;
+  // padding-left: 11vw;
+  @media @desktop {
+    margin-bottom: 0;
+    // padding-left: 1.6vw;
+  }
+  input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 5;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__pseudoInput {
+    width: 1.5vw;
+    height: 1.5vw;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    margin-right: 1%;
+    width: 8.5vw;
+    height: 6.5vw;
+    border-radius: 0;
+    background: @main_color2;
+    font-weight: bold;
+    color: @main_color1;
+    display: inline-block;
+    font-size: 7vw;
+    // margin-left: 2vw;
+    align-self: flex-start;
+    top: 0.9vw;
+    @media @desktop {
+      width: 2.1vw;
+      height: 1.9vw;
+      margin-right: 1.6%;
+      bottom: 0.2vw;
+      margin-left: 0;
+      align-self: center;
+      top: 0;
+      font-size: 1.9vw;
+    }
+    & + span {
+      color: @main_color2;
+      font-size: 3.22vw;
+      display: inline-block;
+      margin-left: 3.5vw;
+      line-height: normal;
+      width: 100vw;
+
+      @media @desktop {
+        font-size: 1.4vw;
+        margin-left: 0;
+        line-height: unset;
+        position: relative;
+        top: 0.2vw;
+        width: 70vw;
+      }
+      a {
+        color: @main_color2;
+      }
+    }
+  }
+  .errorContainer {
+    bottom: -2.5vw;
+    left: 0;
+    @media @desktop {
+      bottom: -1vw;
+    }
+  }
+}
