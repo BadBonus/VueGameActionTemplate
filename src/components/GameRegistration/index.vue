@@ -104,7 +104,6 @@
                   v-model="model.phone"
                   placeholder="XXXXXXX*"
                   type="text"
-                  @keypress="isNumeric"
                 />
                 <span class="errorContainer">{{ errors[0] }}</span>
               </ValidationProvider>
@@ -609,6 +608,16 @@ export default {
     },
   },
   methods: {
+    onInput({ target }) {
+      console.log(target);
+      const val = target.value,
+        newVal = `${Math.min(9, Math.max(0, val.slice(-1) | 0))}`;
+
+      if (val !== newVal) {
+        target.value = newVal;
+        target.dispatchEvent(new Event("input"));
+      }
+    },
     clickFileInputImg() {
       this.$refs.fileInput.click();
     },
@@ -754,7 +763,7 @@ export default {
       form.append("address", post);
       form.append("check_number", cheque);
 
-      this.reset();
+      this.reset(); // убрать при активации отправки данных
 
       // axios
       //   .post(postRegistration, form)
