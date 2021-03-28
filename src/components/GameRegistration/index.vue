@@ -335,7 +335,7 @@
           </ul>
         </div>
 
-        <button type="submit" class="btn" :disabled="isLoadingData">
+        <button type="submit" class="btn" :disabled="invalid">
           Зарегистрироваться
         </button>
         <div class="GameRegistration__RulesBlock">
@@ -411,7 +411,7 @@
           }} -->
           {{ finishedMessage }}
         </span>
-        <button @click="finishedMessage = null">X</button>
+        <button @click="finishedMessage = null"><img src="../../assets/icons/close2.svg" alt=""></button>
       </div>
     </transition>
   </div>

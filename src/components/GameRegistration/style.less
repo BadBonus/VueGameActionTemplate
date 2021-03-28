@@ -40,10 +40,8 @@
     margin: auto;
     margin-top: 10.9vw;
     font-weight: 500;
-    width: 94%;
     @media @desktop {
       margin-top: 5.1vw;
-      width: 81.7%;
     }
   }
   &__formContent {
@@ -187,8 +185,12 @@
         width: 38% !important;
       }
       .errorContainer {
-        width: 13.2vw;
+        width: 40.2vw;
         text-align: left;
+        left: 0vw;
+        @media @desktop {
+          width: 13.2vw;
+        }
       }
     }
     .phoneFirst {
@@ -461,11 +463,11 @@
   .ValidationProvider {
     position: relative;
     margin: 0;
-    height: 10.8vw;
+    height: 10.8vw; //Меняет размеры и у custom file input и custom selector
     font-size: 4.8vw;
 
     @media @desktop {
-      height: 2.8vw;
+      height: 2.8vw; //Меняет размеры и у custom file input и custom selector
       font-size: 1.3vw;
       // margin-right: 0.4vw;
       width: 100%;
@@ -613,7 +615,7 @@
       border-width: 4px;
     }
 
-    &:hover {
+    &:hover:not([disabled]) {
       color: @main_color2;
       background: @main_color1;
     }
@@ -640,7 +642,7 @@
     width: 90%;
     height: 30vw;
     color: #fff;
-    background: @main_color1;
+    background: lightcoral;
     border: 1px solid #fff;
     padding: 0.5vw;
     @media @desktop {
@@ -670,6 +672,13 @@
         width: 5vw;
         height: 3vw;
         border-radius: 0 0 0 21px;
+      }
+
+      img {
+        width: 31%;
+        @media @desktop {
+          width: 45%;
+        }
       }
     }
   }

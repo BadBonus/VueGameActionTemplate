@@ -106,6 +106,10 @@ a {
     opacity: 0.35;
     cursor: not-allowed;
   }
+   &[disabled]:hover {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
   @media @desktop {
     // width: 31vw;
     // font-size: 2.35vw;
