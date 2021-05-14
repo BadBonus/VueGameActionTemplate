@@ -10,6 +10,7 @@ import vco from "v-click-outside";
 import VueScreenSize from "vue-screen-size";
 // import HttpService from "./services/http.service"; //for recatpcha
 // import { VueReCaptcha } from "vue-recaptcha-v3"; //for recatpcha
+import SvgFiller from "vue-svg-filler";
 
 Vue.config.productionTip = false;
 
@@ -33,6 +34,8 @@ Vue.use(VueScreenSize);
 //     useRecaptchaNet: true,
 //   },
 // });
+
+Vue.component("svg-filler", SvgFiller);
 
 Vue.prototype.$desktopSize = 1025;
 Vue.prototype.$isMobileSize = 1025;
