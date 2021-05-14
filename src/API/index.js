@@ -1,4 +1,4 @@
-const mainUrl = 'https://api.alidi-promo.by/api';
+const mainUrl = "https://api.alidi-promo.by/api";
 
-export const getGoods = mainUrl+'/participate/product';
-export const postRegistration = mainUrl+ '/participate/create'
+export const getGoods = mainUrl + "/participate/product";
+export const postRegistration = mainUrl + "/participate/create";

@@ -34,7 +34,6 @@ Vue.use(VueScreenSize);
 //   },
 // });
 
-
 Vue.prototype.$desktopSize = 1025;
 Vue.prototype.$isMobileSize = 1025;
 

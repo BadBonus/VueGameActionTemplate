@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "prettier": "prettier --write src/**/*.{js,vue}",
+    "prepare": "husky install",
+    "eslint": "eslint src/**/*.{js,vue}"
   },
   "dependencies": {
     "@braid/vue-formulate": "^2.4.5",
@@ -38,6 +41,14 @@
     "@vue/cli-service": "~4.5.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^6.0.0",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
   }
 }

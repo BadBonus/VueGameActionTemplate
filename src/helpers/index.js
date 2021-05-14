@@ -16,15 +16,12 @@ export const takeDatePeriodes = (date1, date2) => {
   let choosedMonthsWithDays = [];
 
   const countOfDays = (dynamicDate) =>
-    33 -
-    new Date(dynamicDate.getFullYear(), dynamicDate.getMonth(), 33).getDate();
+    33 - new Date(dynamicDate.getFullYear(), dynamicDate.getMonth(), 33).getDate();
 
   //разница месяцев
   function monthDiff(dateFrom, dateTo) {
     return (
-      dateTo.getMonth() -
-      dateFrom.getMonth() +
-      12 * (dateTo.getFullYear() - dateFrom.getFullYear())
+      dateTo.getMonth() - dateFrom.getMonth() + 12 * (dateTo.getFullYear() - dateFrom.getFullYear())
     );
   }
 
@@ -67,20 +64,12 @@ export const takeDatePeriodes = (date1, date2) => {
   //Обрезание до стартового и после финишных чисел
 
   if (month1 === month2) {
-    choosedMonthsWithDays[0].days = choosedMonthsWithDays[0].days.slice(
-      day1 - 1,
-      day2
-    );
+    choosedMonthsWithDays[0].days = choosedMonthsWithDays[0].days.slice(day1 - 1, day2);
   } else {
-    choosedMonthsWithDays[0].days = choosedMonthsWithDays[0].days.slice(
-      day1 - 1
-    );
-    choosedMonthsWithDays[
+    choosedMonthsWithDays[0].days = choosedMonthsWithDays[0].days.slice(day1 - 1);
+    choosedMonthsWithDays[choosedMonthsWithDays.length - 1].days = choosedMonthsWithDays[
       choosedMonthsWithDays.length - 1
-    ].days = choosedMonthsWithDays[choosedMonthsWithDays.length - 1].days.slice(
-      0,
-      day2
-    );
+    ].days.slice(0, day2);
   }
   return choosedMonthsWithDays;
 };

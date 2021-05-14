@@ -1,7 +1,5 @@
 <template>
-  <div class="MainBlock">
-    main block 1
-  </div>
+  <div class="MainBlock">main block 1</div>
 </template>
 
 <script>
@@ -35,5 +33,4 @@ export default {
   @media @desktop {
   }
 }
-
 </style>

@@ -7,12 +7,8 @@
       v-slot="{ invalid, reset, handleSubmit }"
     >
       <br v-if="isFinishedRegistration" />
-      <h2 v-if="!isFinishedRegistration" class="registrationEnd">
-        Регистрация
-      </h2>
-      <h2 class="registrationEnd" v-if="isFinishedRegistration">
-        Регистрация завершена
-      </h2>
+      <h2 v-if="!isFinishedRegistration" class="registrationEnd">Регистрация</h2>
+      <h2 class="registrationEnd" v-if="isFinishedRegistration">Регистрация завершена</h2>
       <br v-if="isFinishedRegistration" />
       <form
         class="GameRegistration__form"
@@ -21,9 +17,7 @@
         id="game"
       >
         <div class="GameRegistration__formContent">
-          <div
-            class="GameRegistration__blockContent GameRegistration__FIOBlock"
-          >
+          <div class="GameRegistration__blockContent GameRegistration__FIOBlock">
             <ValidationProvider
               mode="lazy"
               tag="div"
@@ -32,11 +26,7 @@
               v-slot="{ errors }"
               class="ValidationProvider"
             >
-              <input
-                v-model="model.surname"
-                type="text"
-                placeholder="Фамилия*"
-              />
+              <input v-model="model.surname" type="text" placeholder="Фамилия*" />
               <span class="errorContainer">{{ errors[0] }}</span>
             </ValidationProvider>
             <ValidationProvider
@@ -56,17 +46,11 @@
               v-slot="{ errors }"
               class="ValidationProvider"
             >
-              <input
-                v-model="model.secondName"
-                type="text"
-                placeholder="Отчество"
-              />
+              <input v-model="model.secondName" type="text" placeholder="Отчество" />
               <span class="errorContainer">{{ errors[0] }}</span>
             </ValidationProvider>
           </div>
-          <div
-            class="GameRegistration__blockContent GameRegistration__techInfo"
-          >
+          <div class="GameRegistration__blockContent GameRegistration__techInfo">
             <div class="GameRegistration__phoneInfo">
               <ValidationProvider
                 tag="div"
@@ -100,11 +84,7 @@
                 name="phone"
                 class="ValidationProvider phone"
               >
-                <input
-                  v-model="model.phone"
-                  placeholder="XXXXXXX*"
-                  type="text"
-                />
+                <input v-model="model.phone" placeholder="XXXXXXX*" type="text" />
                 <span class="errorContainer">{{ errors[0] }}</span>
               </ValidationProvider>
 
@@ -144,18 +124,16 @@
               rules="required"
               name="post"
             >
-              <input
-                v-model="model.post"
-                placeholder="Почтовый адрес*"
-                type="text"
-              />
+              <input v-model="model.post" placeholder="Почтовый адрес*" type="text" />
 
               <span class="errorContainer">{{ errors[0] }}</span>
             </ValidationProvider>
           </div>
           <div class="GameRegistration__blockContent">
             <span
-              class="GameRegistration__blockContentTitle GameRegistration__blockContentTitle_dateTitle"
+              class="
+                GameRegistration__blockContentTitle GameRegistration__blockContentTitle_dateTitle
+              "
             >
               Дата совершения покупки*
             </span>
@@ -183,11 +161,7 @@
                 class="ValidationProvider month"
                 v-if="forceBadRerender"
               >
-                <CustomSelector
-                  v-model="model.month"
-                  :options="months"
-                  @blur="validate"
-                />
+                <CustomSelector v-model="model.month" :options="months" @blur="validate" />
                 <span class="errorContainer">{{ errors[0] }}</span>
               </ValidationProvider>
               <ValidationProvider
@@ -209,11 +183,7 @@
               rules="required"
               name="cheque"
             >
-              <input
-                placeholder="Номер чека*"
-                v-model="model.cheque"
-                type="text"
-              />
+              <input placeholder="Номер чека*" v-model="model.cheque" type="text" />
 
               <span class="errorContainer">{{ errors[0] }}</span>
             </ValidationProvider>
@@ -239,48 +209,34 @@
                 <span
                   class="customFileInput__fileName"
                   :style="{
-                    color: model.file_name
-                      ? 'rgb(255, 93, 162) '
-                      : 'rgb(255, 93, 162)',
+                    color: model.file_name ? 'rgb(255, 93, 162) ' : 'rgb(255, 93, 162)',
                   }"
                 >
-                  {{
-                    model.file_name ? model.file_name : "Загрузить фото чека*"
-                  }}
+                  {{ model.file_name ? model.file_name : "Загрузить фото чека*" }}
                 </span>
                 <div class="customFileInput__helper">
                   <div class="customFileInput__helperModal">
                     <p class="customFileInput__helperModal_p">ВНИМАНИЕ!</p>
                     <p class="customFileInput__helperModal_p">
-                      «Тип файла: JPEG, JPG, размер не более 5 Мб., разрешение
-                      не менее 200 (двести) dpi. Не допускаются изображения, не
-                      являющиеся фотографиями (скриншоты, оттиски, картинки,
-                      компьютерная графика, фотомонтаж. Чек должен быть
-                      сфотографирован полностью, включая верхний и нижний край
-                      чека, изображение чека должна быть строго вертикально
-                      ориентированным. Фотографировать чек необходимо под прямым
-                      углом. Загруженные чеки проходят проверку на соответствие
-                      условиям Акции (модерацию) в течение 72 часов с момента их
+                      «Тип файла: JPEG, JPG, размер не более 5 Мб., разрешение не менее 200 (двести)
+                      dpi. Не допускаются изображения, не являющиеся фотографиями (скриншоты,
+                      оттиски, картинки, компьютерная графика, фотомонтаж. Чек должен быть
+                      сфотографирован полностью, включая верхний и нижний край чека, изображение
+                      чека должна быть строго вертикально ориентированным. Фотографировать чек
+                      необходимо под прямым углом. Загруженные чеки проходят проверку на
+                      соответствие условиям Акции (модерацию) в течение 72 часов с момента их
                       загрузки.»;
                     </p>
                   </div>
-                  <img
-                    @click="clickFileInputImg"
-                    src="./../../assets/icons/camera.svg"
-                    alt=""
-                  />
+                  <img @click="clickFileInputImg" src="./../../assets/icons/camera.svg" alt="" />
                 </div>
               </div>
               <span class="errorContainer">{{ errors[0] }}</span>
             </ValidationProvider>
           </div>
         </div>
-        <div
-          class="GameRegistration__formContent GameRegistration__formContent_items"
-        >
-          <span class="GameRegistration__blockContentTitle">
-            Игровой товар
-          </span>
+        <div class="GameRegistration__formContent GameRegistration__formContent_items">
+          <span class="GameRegistration__blockContentTitle"> Игровой товар </span>
           <ul class="tovar">
             <li v-for="(item, index) in model.choosedItems" :key="index">
               <ValidationProvider
@@ -309,17 +265,10 @@
                   class="ValidationProvider itemCount"
                   v-if="forceBadRerender"
                   :style="{
-                    width:
-                      index + 1 < model.choosedItems.length
-                        ? '100% !important'
-                        : '58vw',
+                    width: index + 1 < model.choosedItems.length ? '100% !important' : '58vw',
                   }"
                 >
-                  <CustomSelector
-                    v-model="item.count"
-                    :options="countTypes"
-                    @blur="validate"
-                  />
+                  <CustomSelector v-model="item.count" :options="countTypes" @blur="validate" />
                   <span class="errorContainer">{{ errors[0] }}</span>
                 </ValidationProvider>
 
@@ -335,9 +284,7 @@
           </ul>
         </div>
 
-        <button type="submit" class="btn" :disabled="invalid">
-          Зарегистрироваться
-        </button>
+        <button type="submit" class="btn" :disabled="invalid">Зарегистрироваться</button>
         <div class="GameRegistration__RulesBlock">
           <ValidationProvider
             tag="div"
@@ -358,8 +305,7 @@
                 <!-- <img src="" alt="TEST" /> -->
               </div>
               <span
-                >*Регистрируясь, Вы подтверждаете свое согласие на участие в
-                рекламной игре.</span
+                >*Регистрируясь, Вы подтверждаете свое согласие на участие в рекламной игре.</span
               >
               <span class="errorContainer">{{ errors[0] }}</span>
             </div>
@@ -384,17 +330,13 @@
               </div>
               <span
                 >*Регистрируясь, Вы подтверждаете, что изучили и согласны с
-                <a href="rules.pdf" target="_blank"
-                  >правилами рекламной игры.</a
-                ></span
+                <a href="rules.pdf" target="_blank">правилами рекламной игры.</a></span
               >
               <span class="errorContainer">{{ errors[0] }}</span>
             </div>
           </ValidationProvider>
         </div>
-        <div class="GameRegistration__messageForRequired">
-          *поля, обязательные для заполнения
-        </div>
+        <div class="GameRegistration__messageForRequired">*поля, обязательные для заполнения</div>
       </form>
     </ValidationObserver>
     <transition
@@ -411,7 +353,9 @@
           }} -->
           {{ finishedMessage }}
         </span>
-        <button @click="finishedMessage = null"><img src="../../assets/icons/close2.svg" alt=""></button>
+        <button @click="finishedMessage = null">
+          <img src="../../assets/icons/close2.svg" alt="" />
+        </button>
       </div>
     </transition>
   </div>
@@ -488,7 +432,7 @@ extend("length", (value) => {
   return `Номер в формате +37529XXXXXXX`;
 });
 
-extend("customRequired", (value, ...some) => {
+extend("customRequired", () => {
   // if (this.model.shop !== null) {
   //   return true;
   // }
@@ -554,11 +498,7 @@ export default {
       let checkNumber = this.model.phone !== null && this.model.phone.trim();
       const re = /(\s*)?(\+)?\d{12}/;
 
-      return (
-        this.model.phone !== null &&
-        re.test(checkNumber) &&
-        checkNumber.length === 13
-      );
+      return this.model.phone !== null && re.test(checkNumber) && checkNumber.length === 13;
     },
     phoneConjucted() {
       const re = /(\s*)?(\+)?\d{12}/;
@@ -573,7 +513,8 @@ export default {
       return !this.model.choosedItems.find(({ value }) => value === undefined);
     },
     isEmailValid() {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      var re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(this.model.email);
     },
     isMobileSize() {
@@ -625,26 +566,20 @@ export default {
       if (this.model.phone === "+375") this.model.phone = "";
     },
     phoneClick() {
-      if (this.model.phone === "" || this.model.phone === null)
-        this.model.phone = "+375";
+      if (this.model.phone === "" || this.model.phone === null) this.model.phone = "+375";
     },
     isNumber: function (evt, cost) {
-      if (cost !== null && cost.includes(".") && evt.key === ".")
-        evt.preventDefault();
+      if (cost !== null && cost.includes(".") && evt.key === ".") evt.preventDefault();
 
       evt = evt ? evt : window.event;
       var charCode = evt.which ? evt.which : evt.keyCode;
-      if (
-        charCode > 31 &&
-        (charCode < 48 || charCode > 57) &&
-        charCode !== 46
-      ) {
+      if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode !== 46) {
         evt.preventDefault();
       } else {
         return true;
       }
     },
-    isNumeric(e) {
+    isNumeric() {
       return false;
     },
     addItem(e) {

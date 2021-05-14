@@ -106,7 +106,7 @@ a {
     opacity: 0.35;
     cursor: not-allowed;
   }
-   &[disabled]:hover {
+  &[disabled]:hover {
     opacity: 0.35;
     cursor: not-allowed;
   }

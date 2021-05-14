@@ -68,21 +68,17 @@ export default {
       return false;
     },
     choosedLabel() {
-      const item = this.context.options.find(
-        (option) => option.value === this.context.model
-      );
+      const item = this.context.options.find((option) => option.value === this.context.model);
       return item ? item.label : this.context.attributes.placeholder;
     },
     filteredOptions() {
       if (Array.isArray(this.context.options) && this.context.model) {
         const isAlreadySelected = this.context.options.find(
-          (option) => option.value === this.context.model
+          (option) => option.value === this.context.model,
         );
         if (!isAlreadySelected) {
           return this.context.options.filter((option) =>
-            option.label
-              .toLowerCase()
-              .includes(this.context.model.toLowerCase())
+            option.label.toLowerCase().includes(this.context.model.toLowerCase()),
           );
         }
       }
@@ -91,9 +87,7 @@ export default {
     },
 
     choosedName() {
-      const count = this.context.attributes.maxLetters
-        ? this.context.attributes.maxLetters
-        : false;
+      const count = this.context.attributes.maxLetters ? this.context.attributes.maxLetters : false;
       if (count) {
         return this.choosedLabel.length > count
           ? this.choosedLabel.slice(0, count) + "..."

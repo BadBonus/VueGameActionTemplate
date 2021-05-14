@@ -24,11 +24,7 @@
         <img class="" src="../assets/icons/triangle.svg" alt="triangle" />
       </div>
     </div>
-    <ul
-      class="CustomSelector__options"
-      v-if="open"
-      v-click-outside="toggleDropdown"
-    >
+    <ul class="CustomSelector__options" v-if="open" v-click-outside="toggleDropdown">
       <li
         @click="chooseOption(option)"
         v-for="option in options"
@@ -57,9 +53,7 @@ export default {
       let name = this.placeholder ? this.placeholder : "click";
       if (this.value) {
         if (typeof this.options[0] === "object") {
-          name = this.options.find(
-            (el) => String(el.value) === String(this.value)
-          ).label;
+          name = this.options.find((el) => String(el.value) === String(this.value)).label;
 
           if (this.maxLetters && name.length > this.maxLetters)
             name = name.slice(0, this.maxLetters) + "...";
@@ -112,10 +106,7 @@ export default {
     },
     chooseOption(option) {
       this.open = false;
-      this.$emit(
-        "input",
-        typeof option === "object" ? String(option.value) : String(option)
-      );
+      this.$emit("input", typeof option === "object" ? String(option.value) : String(option));
     },
     toggleDropdown() {
       this.open = false;
@@ -128,7 +119,7 @@ export default {
     },
   },
   created() {
-    var vm = this;
+    // var vm = this;
     // document.addEventListener("click", function () {
     //   vm.toggleDropdown();
     // });

@@ -3,11 +3,7 @@
     :class="`CustomFormulateCheckbox formulate-input-element formulate-input-element--${context.type}`"
     :data-type="context.type"
   >
-    <input
-      type="checkbox"
-      v-model="context.model"
-      v-bind="context.attributes"
-    />
+    <input type="checkbox" v-model="context.model" v-bind="context.attributes" />
     <div
       :class="{
         CustomFormulateCheckbox__pseudoInput: true,
@@ -40,6 +36,4 @@ export default {
 @import "../styles/variables.less";
 
 // @heightOfComponent: auto;
-
-
 </style>
