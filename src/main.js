@@ -1,7 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
 
-import VueLazyload from "vue-lazyload";
 // import VueSplide from "@splidejs/vue-splide"; //Вызывает поломку в ie11
 import VueScrollTo from "vue-scrollto";
 import VueWaypoint from "vue-waypoint";
@@ -11,6 +10,8 @@ import VueScreenSize from "vue-screen-size";
 // import HttpService from "./services/http.service"; //for recatpcha
 // import { VueReCaptcha } from "vue-recaptcha-v3"; //for recatpcha
 import SvgFiller from "vue-svg-filler";
+import { VLazyImagePlugin } from "v-lazy-image";
+
 
 Vue.config.productionTip = false;
 
@@ -18,8 +19,9 @@ Vue.config.productionTip = false;
 Vue.use(vco);
 Vue.use(VueScrollTo);
 Vue.use(VueWaypoint);
-Vue.use(VueLazyload);
 Vue.use(VueScreenSize);
+Vue.use(VLazyImagePlugin);
+
 // Vue.use(HttpService);
 
 // Vue.use(VueGtag, {
@@ -39,6 +41,8 @@ Vue.component("svg-filler", SvgFiller);
 
 Vue.prototype.$desktopSize = 1025;
 Vue.prototype.$isMobileSize = 1025;
+Vue.prototype.$isIE11 =
+  !!window.MSInputMethodContext && !!document.documentMode;
 
 new Vue({
   render: (h) => h(App),
